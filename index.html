@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CGPA CALCULATOR</title>
+  </head>
+  <body>
+    <h1>CGPA CALCULATOR</h1>
+    <p id="name"></p>
+    <!-- the first semester -->
+    <div class="first">
+      <h2><i>First Semester</i></h2>
+      <div>
+        <p>Course Code</p>
+        <input
+          type="text"
+          placeholder="course code"
+          spellcheck="false"
+          id="course-code"
+        />
+      </div>
+      <div>
+        <p>Course Units</p>
+        <input type="number" min="1" max="5" id="course-units" />
+      </div>
+      <div>
+        <p>Grade</p>
+
+        <input type="text" placeholder="grade" id="grade" />
+        <p></p>
+      </div>
+      <div id="no"></div>
+      <button id="submit">submit</button>
+      <button id="calc">calculate your GPA</button>
+      <div id="gpa_block">
+        Your GPA for this semester:
+        <p class="gpa"></p>
+      </div>
+    </div>
+    <!-- the second semester -->
+    <div class="second">
+      <h2><i>Second Semester</i></h2>
+      <div>
+        <p>Course Code</p>
+        <input
+          type="text"
+          placeholder="course code"
+          spellcheck="false"
+          id="course-code2"
+        />
+      </div>
+      <div>
+        <p>Course Units</p>
+        <input type="number" min="1" max="5" id="course-units2" />
+      </div>
+      <div>
+        <p>Grade</p>
+        <input type="text" placeholder="grade" id="grade2" />
+      </div>
+      <button id="submit2">submit</button>
+      <button id="calc2">calculate your GPA</button>
+      <div id="gpa_block2">
+        Your GPA for this semester:
+        <p class="gpa2"></p>
+      </div>
+    </div>
+    <div>
+      <button id="cgpa">calculate your CGPA</button>
+      <p class="cgpa"></p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
