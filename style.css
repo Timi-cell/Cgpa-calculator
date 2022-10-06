@@ -1,18 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
 button {
-  margin-top: 20px;
+  margin-top: 2rem;
   outline: none;
   border: none;
   color: #fff;
   background-color: blue;
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
 }
-
+h1 {
+  margin-top: 2rem;
+  text-align: center;
+}
 .first,
 .second {
   border: 1px solid #000;
-  padding: 20px;
-  margin: 10px;
+  padding: 4rem;
+  margin: 3rem 3rem 0 3rem;
+  width: 50%;
+}
+
+.first div,
+.second div,
+input , #name{
+  margin-top: 2rem;
+}
+
+input {
+  padding: 0.5rem;
+  outline: none;
+}
+.top_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .gpa,
@@ -26,9 +59,44 @@ button {
 #gpa_block2 {
   display: none;
   text-align: center;
+  margin-top: 3rem;
+  background-color: green;
+  color: white;
+  padding: 1rem;
 }
 
 .gpa,
 .gpa2 {
   display: inline;
+}
+
+#bottom_block {
+  margin: 0 0 3rem 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .top_block {
+    flex-direction: column;
+  }
+  .first,
+  .second {
+    width: 80%;
+  }
+  #bottom_block {
+    text-align: center;
+  }
+  .gpa,
+  .gpa2 {
+    line-height: 1.5;
+  }
+  .cgpa {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 332px) {
+  .first,
+  .second {
+    width: 90%;
+  }
 }
