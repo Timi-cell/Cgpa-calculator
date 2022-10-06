@@ -2,7 +2,9 @@ let user = prompt(
   "Hi welcome to my CGPA calculator!, Can I have your name please?"
 );
 if (user !== "" && user !== null) {
-  document.getElementById("name").textContent = `Current User: ${user}`;
+  document.getElementById(
+    "name"
+  ).textContent = `Current User: ${user.toUpperCase()}`;
 } else {
   alert(
     "You did not enter your name!, You can refresh the page to enter your name"
@@ -28,7 +30,6 @@ document.getElementById("submit").addEventListener("click", () => {
   let courseName = document.querySelector("#course-code").value;
   let courseUnits = parseInt(document.querySelector("#course-units").value);
   let gradeScores = document.querySelector("#grade").value.toUpperCase();
-
   if (courseName !== "" && courseUnits !== "" && gradeScores !== "") {
     coursesFirst.push(courseName);
     document.querySelector("#course-code").value = "";
@@ -136,7 +137,7 @@ document.getElementById("cgpa").addEventListener("click", () => {
   if (!isNaN(firstGpa) && !isNaN(secondGpa)) {
     document.querySelector(
       ".cgpa"
-    ).textContent = `${user}, Your CGPA for this session is ${
+    ).textContent = `${user.toUpperCase()}, Your CGPA for this session is ${
       (firstGpa + secondGpa) / 2
     }`;
   } else {
